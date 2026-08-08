@@ -1,116 +1,199 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>subhajit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Snigdha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background: linear-gradient(135deg, #ffc0cb, #ff69b4); 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
 
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #555555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .sender-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e84118;
+        }
+
+        /* Modal / Pop-up Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 380px;
+            width: 90%;
+            animation: popup 0.4s ease-out forwards;
+        }
+
+        @keyframes popup {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-box h2 {
+            color: #ff4757;
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            background-color: #2ed573;
+        }
+
+        .close-btn:hover {
+            background-color: #26af5f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Happy Birthday,😍Snigdha😍🎂to you😇</h1>
+        <p>Wishing you a day filled with laughter😄, love💕, and unforgettable moments. May all your dreams come true ☺✨</p>
+        
+        <p class="sender-name">wishes from,<br>your Subhajit😇</p>
+        
+        <button class="btn" onclick="openPopup(1)">Click for Special Message</button>
+    </div>
+
+    <!-- 1st Pop-up -->
+    <div class="modal-overlay" id="popupModal1">
+        <div class="modal-box">
+            <h2>🎉 Special Message 1</h2>
+            <img src="https://i.ibb.co/fdsdqq1m/IMG-20260807-231322-872.jpg" 
+                 alt="Surprise Image 1" 
+                 style="width: 175px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+            <p>💝💝</p>
+            <button class="btn close-btn" onclick="nextPopup(1, 2)">Next Surprise ➔</button>
+        </div>
+    </div>
+
+    <!-- 2nd Pop-up -->
+    <div class="modal-overlay" id="popupModal2">
+        <div class="modal-box">
+            <h2>✨ <span style="color:green;">Special Message 2</span></h2>
+            <p><span style="color:red;">I Love You soooooo much Snigdha 😘</span></p>
+            <button class="btn close-btn" onclick="nextPopup(2, 3)">Next Surprise ➔</button>
+        </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="popupModal3">
+        <div class="modal-box">
+            <h2>💖 <span style="color:#ff4757;">Special Message 3</span></h2>
+            <p>You are the most precious person in my life! 🌸✨</p>
+            <button class="btn close-btn" onclick="nextPopup(3, 4)">Next Surprise ➔</button>
+        </div>
+    </div>
+
+    <!-- 4th Pop-up (নতুন যুক্ত করা হয়েছে) -->
+    <div class="modal-overlay" id="popupModal4">
+        <div class="modal-box">
+            <h2>🌟 <span style="color:#ffa500;">Special Message 4</span></h2>
               
-         <body bgcolor ="White" align=center>
-    <font color="red"> 
-        
-    <h1><font  color=black>---ARPAN LAURE---</font></h1>
-    <h4>MAUT KA KHEL</h4></font>
-    <font color="blue"><p align=center> <marquee><b><br>We are <font color=red>INDIAN</font><b></marquee></p></font>
-    
-    <a href="https://m.youtube.com/@Subhajit---7779">subhajit dhara</a>-click here and please subscribe my channel<br>
-    <br>
-    <a href="https://www.instagram.com/subhajit_450?igsh=MW83bjQ0N3BmYmVrOA=="> subhajit_450</a> - please follow me on <font color=purple>Instagram</font>
-    
-   <marquee><h3>Table:1</h3></marquee> 
-    <table border=1 width=22% cellpadding=20>  
-        <tr>
-            <th>student name</th>
-            <th>physics</th> 
-            <th>chemistry</th>
-            <th>math</th>  
-            <th>English</th>
-            <th>gand masti</th>
-            
-            </tr>
-            
-            <tr>
-               <td> Subhajit Dhara</td> 
-               <td> null</td>
-               <td> null</td>
-               <td> null</td>
-               <td>ok</td>
-               <th>good</th>
-            </tr> 
-            
-         </table>
-    
-    
-    <br>
-    <br>
-    <font color=black> <marquee behaviour=alternate scrollamount=4>are bapre</marquee> 
-    
-    <font color=blue> <marquee behaviour=alternate scrollamount=14>Arpan mu me lega sabka........</marquee> <br></font>
-    <marquee direction="up" width="50"bgcolor="pink">MC MC  MC   MC  </marquee> <marquee direction="down" width="50" bgcolor="sky blue" scrollamount=4>  MC  MC  MC  MC    </marquee>
-    <marquee behaviou=slide  width="50" height="30" bgcolor="pink" loop=8>shit </marquee>
-    </body> 
-    
-      
-    <ul >
-       
-        <li><p align=left>facebook- Subhajit Dhara</p></li>
-        <li><p align=left>instagram-<a href="https://www.instagram.com/subhajit_450?igsh=MW83bjQ0N3BmYmVrOA=="> subhajit_450</a> </p></li>
-        
-    <li> <p align=left>image↓↓</p></li></ul>
-   <a href="https://ibb.co/r2yvB8JR"><img src="https://i.ibb.co/chTxWfdS/IMG-20250401-WA0002.jpg" alt="IMG-20250401-WA0002" border="0" width=100></a><br><br><br><br><br>
-<br><br><br><br><br>
-<br><br><br><br><br>
-       <font color=red> <b>Gand mari hai Gand mari</b></font> <h1>&#129313;</h1>
-       
-       <h1>--Fill your Jee (Jhatu Entrance Exam) [.1](2026)exam form--</h1>
-      <p align="center">
-       Name:
-       <input type="text" name="Name" size="15" maxlength="30" placeholder="jhatu nam likh"><br><br>
-       Father Name:<input type="text" name="baap ka nam" size="15" maxlength="30" placeholder="baap ka nam"><br><br>   
-       Mother Name :
-         <input type="text" name="Name" size="15" maxlength="30" placeholder="Ma ka nam"><br><br>
-    Age :
-    <input type="number" name="Age"  size="15" maxlength="30" placeholder="Age"><br><br>
-      cast :
-    <input type="text" name="Age"  size="15" maxlength="30" placeholder="cast"><br><br>
-   Gender :
-    <input type="radio" name="Age"  size="15" maxlength="30" value="Male">Male
-   <input type="radio" name="Age"  size="15" maxlength="30" value="Female">Female
-   <input type="radio" name="Age"  size="15" maxlength="30" value="Hijda">Hijda<br><br>
-     G-mail :
-    <input type="email" name="emai"  size="15" maxlength="30" placeholder="Email"><br><br>
-     Phone no. :
-    <input type="number" name="phone no."  size="15" maxlength="30" placeholder="phone no."><br><br>
-     DOB :
-    <input type="date" name="date of bith"  size="15" maxlength="30" placeholder="dd/mm/yyyy"><br><br>
-     Time you're submitting :
-    <input type="time" name="time"  size="15" maxlength="30" placeholder="time"><br><br>
-   <input type="submit" value="submit"><br><br><br>
-----------------------------------------------------------------------------------------------------    
-  ``-------------------------------------------------------------------------------------------------------<br><br><br>
-    
-    
-    
-    
-   
-    
-    
-   </p>
-    
-    
-   <font color='red' >``TERI YAAD ME HAM JAMANA BHUL GYE ...</font><br><font color='orange'>KISI OR KO HAM APNANA BHUL GYE ...</font><br><font color='green'>OR TUJHSE MOHABBAT HAI<BR>MAINE BATAYA SARE JAHAAN KO... </font>
-  <font color='red'> <BR>BASS GALTI ITNI THI...</font><BR><font color='green'>BAS TUJHE HI BATANA BHUL GYE... </font>:)``
- 
-   
-    
- <font color=powder blue>   <p align=right>-©reated by subhajit™</p></font>
-    
-   <font color="red"><p align="center">•work on progress stay connected...</p></font> 
-   
-   
-   
-   <script src="first.js"></script>
-    </body>
- </html>   
-    
-    
-    
-  
+              <!-- পপ-আপের ভেতরে বসানোর জন্য ছবির কোড -->
+<img src="https://i.ibb.co/Jj5bx2nT/IMG-20260809-010011.jpg" 
+     alt="Snigdha Image" 
+     style="width: 220px; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+
+              <p>😍</p>
+              
+            <button class="btn close-btn" onclick="nextPopup(4, 5)">Next Surprise ➔</button>
+        </div>
+    </div>
+
+    <!-- 5th Pop-up (Final Wish) -->
+    <div class="modal-overlay" id="popupModal5">
+        <div class="modal-box">
+            <h2><span style="color:skyblue;">Final Message 😇</span></h2>
+            <h2>🥰🥰 Will you marry me Snigdha 😊?? 💍🥰🥰</h2>
+            <p>( please reply me on insta ) </p>
+            <button class="btn close-btn" onclick="closePopup(5)">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(num) {
+            document.getElementById('popupModal' + num).style.display = 'flex';
+        }
+
+        function nextPopup(currentNum, nextNum) {
+            document.getElementById('popupModal' + currentNum).style.display = 'none';
+            document.getElementById('popupModal' + nextNum).style.display = 'flex';
+        }
+
+        function closePopup(num) {
+            document.getElementById('popupModal' + num).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
