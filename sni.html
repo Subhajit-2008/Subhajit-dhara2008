@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Snigdha</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffc0cb, #ff69b4); 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* প্রাথমিক স্টার্ট স্ক্রিন (Click Here snigdha 😋) */
+        .start-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .start-btn {
+            background-color: #ffffff;
+            color: #ff4757;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            animation: pulse 1.5s infinite;
+        }
+
+        .start-btn:hover {
+            transform: scale(1.08);
+            background-color: #fff0f3;
+        }
+
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+       
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            width: 100%;
+            display: none; /* প্রথমে লুকানো থাকবে */
+            animation: cardAppear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.5) translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            color: #555555;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .sender-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .btn {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e84118;
+        }
+
+        /* Modal / Pop-up Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-box {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 380px;
+            width: 90%;
+            animation: popup 0.4s ease-out forwards;
+        }
+
+        @keyframes popup {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-box h2 {
+            color: #ff4757;
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            margin-top: 20px;
+            background-color: #2ed573;
+        }
+
+        .close-btn:hover {
+            background-color: #26af5f;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="start-screen" id="startScreen">
+        <button class="start-btn" onclick="revealCard()">Click Here snigdha 😋</button>
+    </div>
+
+  
+    <div class="card" id="mainCard">
+        <h1>😍Snigdha😍 Happy Birthday🎂to you😇</h1>
+        <p>Wishing you a day filled with laughter😄, love💕, and unforgettable moments. May all your dreams come true ☺✨</p>
+        
+        <p class="sender-name">wishes from,<br>your Subhajit😇</p>
+        
+        <button class="btn" onclick="openPopup(1)">Click for Special Message</button>
+    </div>
+
+    
+    <div class="modal-overlay" id="popupModal1">
+        <div class="modal-box">
+            <h2>🎉 Special Message 1</h2>
+            <img src="https://i.ibb.co/fdsdqq1m/IMG-20260807-231322-872.jpg" 
+                 alt="Surprise Image 1" 
+                 style="width: 175px; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+            <p>💝💝</p>
+            <button class="btn close-btn" onclick="nextPopup(1, 2)">🤭➔</button>
+        </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="popupModal2">
+        <div class="modal-box">
+            <h2>✨ <span style="color:green;">Special Message 2</span></h2>
+            <p><span style="color:red;">I Love You soooooo much Snigdha 😘</span></p>
+            <button class="btn close-btn" onclick="nextPopup(2, 3)">→➔</button>
+        </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="popupModal3">
+        <div class="modal-box">
+            <h2>💖 <span style="color:#ff4757;">Special Message 3</span></h2>
+            <p>You are the most precious person in my life! 🌸✨</p>
+            <button class="btn close-btn" onclick="nextPopup(3, 4)">🤭🤭 ➔</button>
+        </div>
+    </div>
+
+   
+    <div class="modal-overlay" id="popupModal4">
+        <div class="modal-box">
+            <h2>🌟 <span style="color:#ffa500;">Special Message 4</span></h2>
+            <img src="https://i.ibb.co/Jj5bx2nT/IMG-20260809-010011.jpg" 
+                 alt="Snigdha Image" 
+                 style="width: 220px; height: 250px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">
+            <p>😍</p>
+            <button class="btn close-btn" onclick="nextPopup(4, 5)">🤭🤭🤭🤭 ➔</button>
+        </div>
+    </div>
+
+    
+    <div class="modal-overlay" id="popupModal5">
+        <div class="modal-box">
+            <h2><span style="color:skyblue;">Final Message 😇</span></h2>
+            <h2>🥰🥰 Will you marry me Snigdha 😊?? 💍🥰🥰</h2>
+            <p>( please reply me on insta ) </p>
+            <button class="btn close-btn" onclick="closePopup(5)">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // প্রথমে Click Here চাপলে কার্ড অ্যানিমেশন করার ফাংশন
+        function revealCard() {
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('mainCard').style.display = 'block';
+        }
+
+        function openPopup(num) {
+            document.getElementById('popupModal' + num).style.display = 'flex';
+        }
+
+        function nextPopup(currentNum, nextNum) {
+            document.getElementById('popupModal' + currentNum).style.display = 'none';
+            document.getElementById('popupModal' + nextNum).style.display = 'flex';
+        }
+
+        function closePopup(num) {
+            document.getElementById('popupModal' + num).style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
